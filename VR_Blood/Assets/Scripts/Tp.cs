@@ -9,10 +9,10 @@ public class Tp : MonoBehaviour
     [SerializeField] private GameObject tpobject;
     [SerializeField] private Animator fadeout;
 
-    [SerializeField] private GameObject Hips;
-    [SerializeField] private GameObject LeftLeg;
-    [SerializeField] private GameObject RightLeg;
-    [SerializeField] private GameObject rightknee;
+    [SerializeField] private GameObject LocomotionSystem;
+    [SerializeField] private GameObject OriginalRemy;
+    [SerializeField] private GameObject NewRemy;
+    [SerializeField] private GameObject NewXRRig;
     [SerializeField] private GameObject Leftknee;
     [SerializeField] private GameObject RightFoot;
     [SerializeField] private GameObject LeftFoot;
@@ -23,7 +23,15 @@ public class Tp : MonoBehaviour
 
     public void TpCharacter()
     {
-        rig.transform.position = tpobject.transform.position;
+        // rig.transform.position = tpobject.transform.position;
+        
+        NewRemy.SetActive(true);
+        NewXRRig.SetActive(true);
+        OriginalRemy.SetActive(false);
+        LocomotionSystem.SetActive(false);
+        rig.SetActive(false);
+        
+
         
     }
 
