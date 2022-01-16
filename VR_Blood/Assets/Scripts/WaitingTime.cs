@@ -7,6 +7,7 @@ public class WaitingTime : MonoBehaviour
     public float maxTime;
     [SerializeField] private float refreshTime;
     [SerializeField] private Animator doorAnimation;
+    [SerializeField] private AudioSource voice;
     private float time = 0;
     private bool activate;
     private float period = 0;
@@ -25,6 +26,7 @@ public class WaitingTime : MonoBehaviour
                 {
                     
                     doorAnimation.SetBool("OpenClose", true);
+                    voice.Play();
                     Destroy(gameObject);
                 }
                 

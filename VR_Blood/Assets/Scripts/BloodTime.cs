@@ -9,6 +9,8 @@ public class BloodTime : MonoBehaviour
     [SerializeField] private float maxTimeEnd;
     [SerializeField] private float refreshTimeEnd;
     [SerializeField] private Animator blood;
+    [SerializeField] private AudioSource voice1;
+    [SerializeField] private AudioSource voice2;
     private bool activate;
     private bool end;
     private float period = 0;
@@ -60,6 +62,7 @@ public class BloodTime : MonoBehaviour
     public void ActivateBlood()
     {
         activate = true;
+        voice1.Play();
     }
 
     public void GettingBlood()
@@ -71,5 +74,6 @@ public class BloodTime : MonoBehaviour
     {
         GetComponent<Animator>().SetTrigger("Ending");
         end = true;
+        voice2.Play();
     }
 }
