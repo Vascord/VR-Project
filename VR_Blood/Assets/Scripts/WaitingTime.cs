@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaitingTime : MonoBehaviour
 {
-    [SerializeField] private float maxTime;
+    public float maxTime;
     [SerializeField] private float refreshTime;
     [SerializeField] private Animator doorAnimation;
     private float time = 0;
