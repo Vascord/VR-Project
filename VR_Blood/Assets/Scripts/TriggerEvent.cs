@@ -32,10 +32,7 @@ public class TriggerEvent : MonoBehaviour
             }
             if (interfaceCheck)
             {
-
                 fade.SetTrigger("FadeIn");
-                StartCoroutine(FadeStart());
-
             }
         }
     }
@@ -51,12 +48,5 @@ public class TriggerEvent : MonoBehaviour
 
             Destroy(gameObject);
         }
-    }
-    private IEnumerator FadeStart()
-    {
-        Debug.Log(interfaceThing.alpha);
-
-        yield return new WaitForSeconds(transitionTimeSpeed);
-
     }
 }
